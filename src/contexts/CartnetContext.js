@@ -61,24 +61,32 @@ export const CarnetProvider = ({ children }) => {
       }
     }
   };
-  const removeItem = async (itemId) => {
-    await axios.delete(`http://localhost:8000/api/carnets/delete/${itemId}`);
-    getCarnets();
-    navigate("/carnet");
-  };
+ 
 
   const updateData = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`http://localhost:8000/api/edit/${carnet.id}` , formValues);
-     
-      getCarnets();
+      const response =await axios.put(`http://localhost:8000/api/edit/${carnet.id}` , formValues);
+      if(response.data.data){
+        getCarnets();
+        
+      }
       navigate("/carnet");
+     
     } catch (e) {
       if (e.response.status === 422) {
         setErrors(e.response.data.errors);
       }
     }
+  };
+
+ 
+
+
+  const removeItem = async (itemId) => {
+    await axios.delete(`http://localhost:8000/api/carnets/delete/${itemId}`);
+    getCarnets();
+    navigate("/carnet");
   };
 
   return (
@@ -95,6 +103,7 @@ export const CarnetProvider = ({ children }) => {
         removeItem,
         updateData,
         setCarnet,
+        setErrors
       }}
     >
       {children}

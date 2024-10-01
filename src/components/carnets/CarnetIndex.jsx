@@ -53,13 +53,13 @@ const CarnetIndex = () => {
                   <td className="px-6 py-4">{carnet?.email}</td>
                   <td className="px-6 py-4">{carnet?.contact}</td>
 
-  <Link className="m-10" to={`/edit/${carnet.id}`}>
-  <td className="x-4 py-2  bg-indigo-500 hover:bg-indigo-700 text-white rounded-md">Modifier</td>
+  <Link className="" to={`/edit/${carnet.id}`}>
+  <td className="px-4 py-2  bg-indigo-500 hover:bg-indigo-700 text-white rounded-md">Modifier</td>
   </Link>
  <td></td>
-  <Link className="m-10" to="/">
-  <td    onClick={()=>removeItem(carnet?.id)}className="x-4 py-2  bg-red-500 hover:bg-red-700 text-white rounded-md">Supprimer</td>
-  </Link>
+ 
+  <button    onClick={()=>removeItem(carnet?.id)}className="x-4 py-2  bg-red-500 hover:bg-red-700 text-white rounded-md">Supprimer</button>
+
  
  
  

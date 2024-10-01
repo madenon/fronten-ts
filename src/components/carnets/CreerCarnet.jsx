@@ -60,7 +60,7 @@ const CreerCarnet = () => {
         </div>
         <div className="my-4">
           <button type="submit" className="px-4 py2 bg-indigo-500 hover:bg-indigo-700 text-white rounded-md">
-            Mettre  à jour
+            Créer  
           </button>
         </div>
       </form>

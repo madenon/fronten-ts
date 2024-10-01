@@ -3,12 +3,13 @@ import CarnetConext from "../../contexts/CartnetContext";
 import { useParams } from "react-router-dom";
 
 const EditCranet = () => {
-  const { formValues, onChange, errors, carnet, getCarnet, updateData } =
+  const { formValues, onChange, errors,  setErrors, getCarnet, updateData } =
     useContext(CarnetConext);
   const  { id } = useParams();
 
   useEffect(() => {
     getCarnet(id);
+    setErrors({})
   }, []);
 
   return (

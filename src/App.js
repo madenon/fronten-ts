@@ -20,12 +20,10 @@ function App() {
               <Link to="/carnet">Tout les carnets</Link>
             </li>
             <li className="m-2 p-2 bg-indigo-500 hover:bg-indigo-700 text-white rounded-md">
-              <Link to="/">Home</Link>
+              <Link to="/creer">Créer contact</Link>
             </li>
 
-            <li className="m-2 p-2 bg-indigo-500 hover:bg-indigo-700 text-white rounded-md">
-              <Link to="/creer">creer</Link>
-            </li>
+          
 
             
           </ul>
