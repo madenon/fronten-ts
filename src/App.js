@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
 import CreerCarnet from "./components/carnets/CreerCarnet";
 import EditCranet from "./components/carnets/EditCranet";
 import CarnetIndex from "./components/carnets/CarnetIndex";
@@ -30,7 +29,6 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/"  element={<Home />} />
           <Route path="/carnet"  element={<CarnetIndex />} />
           <Route path="/creer"  element={<CreerCarnet />} />
           <Route path="/edit/:id"  element={<EditCranet />} />
